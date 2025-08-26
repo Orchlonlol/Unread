@@ -1,0 +1,48 @@
+Component usage example:
+```import "./page.css";
+import ArticleCard from "@/components/articleCard/articleCard";
+
+export default function Home() {
+  const articles = [
+    {
+      title: "1",
+      image: "/images/globe.svg",
+      viewCounts: 5302,
+      commentCounts: 0,
+      category: "Мэдүүштэй",
+      readTime: "3 мин",
+    },
+    {
+      title: "2",
+      image: "/images/globe.svg",
+      viewCounts: 5302,
+      commentCounts: 0,
+      category: "Мэдүүштэй",
+      readTime: "3 мин",
+    },
+    {
+      title: "3",
+      image: "/images/globe.svg",
+      viewCounts: 5302,
+      commentCounts: 0,
+      category: "Мэдүүштэй",
+      readTime: "3 мин",
+    },
+  ];
+
+  return (
+    <div className="mainContainer">
+      {articles.map((article) => (
+        <ArticleCard
+          title={article.title}
+          image={article.image}
+          viewCounts={article.viewCounts}
+          commentCounts={article.commentCounts}
+          category={article.category}
+          readTime={article.readTime}
+        />
+      ))}
+    </div>
+  );
+}
+```
